@@ -1,0 +1,2 @@
+rootProject.name='GeoCalc'
+include ':app'
