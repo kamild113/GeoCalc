@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="415dp"
         android:layout_height="56dp"
-        android:background="#218024"
+        android:background="@color/polarColor"
         android:gravity="bottom|left"
         android:paddingLeft="25dp"
         android:paddingBottom="5dp"
@@ -25,28 +25,245 @@
         tools:layout_editor_absoluteX="-2dp"
         tools:layout_editor_absoluteY="-1dp" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="56dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/szynszyla2" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="185dp"
-        android:text="A tutaj co?"
-        android:textSize="30sp"
-        android:textStyle="italic"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="57dp"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="#1 Współrzędna"
+                android:layout_margin="20dp"
+                />
+
+            <Button
+                android:id="@+id/polarFirstCoordinateButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@android:drawable/ic_menu_mylocation"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/polarColor"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X:"
+                android:labelFor="@+id/polarFirstX"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/polarFirstX"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/polarColor"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/polarColor"
+                android:inputType="numberDecimal"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Y:"
+                android:labelFor="@+id/polarFirstY"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/polarFirstY"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/polarColor"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/polarColor"
+                android:inputType="numberDecimal"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="#2 Współrzędna"
+                android:layout_margin="20dp"
+                />
+
+            <Button
+                android:id="@+id/polarSecondCoordinateButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@android:drawable/ic_menu_mylocation"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/polarColor"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X:"
+                android:labelFor="@+id/polarSecondX"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/polarSecondX"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/polarColor"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/polarColor"
+                android:inputType="numberDecimal"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Y:"
+                android:labelFor="@+id/polarSecondY"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/polarSecondY"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/polarColor"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/polarColor"
+                android:inputType="numberDecimal"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/polarColor"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Odległość:"
+                android:labelFor="@+id/polarDistance"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/polarDistance"
+                android:layout_width="95dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/polarColor"
+                android:inputType="numberDecimal"
+                android:textColor="@color/polarColor"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kąt:"
+                android:labelFor="@+id/polarAngle"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/polarAngle"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/polarColor"
+                android:inputType="numberDecimal"
+                android:textColor="@color/polarColor"
+                android:textCursorDrawable="@null" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/polarColor"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wynik"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/polarResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/fill_data"
+            />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

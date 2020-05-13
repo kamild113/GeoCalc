@@ -1,3 +1,14 @@
 <resources>
+
     <string name="app_name">GeoCalc</string>
+
+    <string name="fill_data">Wprowadź dane</string>
+    <string name="get_coordinates">Pobieranie współrzędnych</string>
+
+    <string-array name="angles_array">
+        <item>Grady</item>
+        <item>Stopnie</item>
+        <item>Radiany</item>
+    </string-array>
+
 </resources>
