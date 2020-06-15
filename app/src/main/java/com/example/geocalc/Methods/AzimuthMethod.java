@@ -17,7 +17,12 @@ public class AzimuthMethod implements ICalcMethod
     @Override
     public String Calc()
     {
-        return "Wynik metody obliczania azymutu";
+        double dxab = _model.SecondX - _model.FirstX;
+        double dyab = _model.SecondY - _model.FirstY;
+
+        double result = Math.abs(dyab/dxab);
+
+        return Double.isNaN(result) ? "Błędne dane" : Double.toString(result);
     }
 
 }

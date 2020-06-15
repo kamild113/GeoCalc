@@ -53,17 +53,19 @@ public class PolarMethodCalc extends CalcActivity
         CreateInputsListeners();
     }
 
-    private void CreateInputsListeners()
+    protected void CreateInputsListeners()
     {
+        super.CreateInputsListeners();
+
         _firstX = findViewById(R.id.polarFirstX);
         _firstY = findViewById(R.id.polarFirstY);
         _secondX = findViewById(R.id.polarSecondX);
         _secondY = findViewById(R.id.polarSecondY);
         _distance = findViewById(R.id.polarDistance);
         _angle = findViewById(R.id.polarAngle);
-        TextView resultView = findViewById(R.id.polarResult);
+        Button calcButton = findViewById(R.id.calcButton);
 
-        InputWatcher(resultView, _firstX, _firstY, _secondX, _secondY, _distance, _angle);
+        InputWatcher(calcButton, _firstX, _firstY, _secondX, _secondY, _distance, _angle);
     }
 
     private View.OnClickListener ButtonClickListener(final LocationCallback callback)

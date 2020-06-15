@@ -55,8 +55,8 @@ public class LocationProvider
         {
             LocationRequest mLocationRequest = new LocationRequest();
             mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-            mLocationRequest.setInterval(1000);
-            mLocationRequest.setFastestInterval(1000);
+            mLocationRequest.setInterval(5000);
+            mLocationRequest.setFastestInterval(5000);
             mLocationRequest.setNumUpdates(1);
 
             _fusedClient = LocationServices.getFusedLocationProviderClient(_activity);

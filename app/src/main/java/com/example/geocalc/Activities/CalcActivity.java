@@ -1,7 +1,12 @@
 package com.example.geocalc.Activities;
 
+import android.app.AlertDialog;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -20,7 +25,18 @@ public abstract class CalcActivity extends AppCompatActivity
 
     protected abstract IMethodModel GetModel();
 
-    protected TextWatcher InputWatcher(final TextView resultView, final EditText... inputs)
+    protected void CreateInputsListeners()
+    {
+        Button calcButton = findViewById(R.id.calcButton);
+        calcButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                OnCalcClick(v);
+            }
+        });
+    }
+
+    protected TextWatcher InputWatcher(final Button calcButton, final EditText... inputs)
     {
         TextWatcher watcher =  new TextWatcher() {
             @Override
@@ -32,14 +48,7 @@ public abstract class CalcActivity extends AppCompatActivity
             @Override
             public void afterTextChanged(Editable s)
             {
-                if(AllInputsFilled(inputs))
-                {
-                    resultView.setText(Calc());
-                }
-                else
-                {
-                    resultView.setText(R.string.fill_data);
-                }
+                calcButton.setEnabled(AllInputsFilled(inputs));
             }
         };
 
@@ -51,6 +60,21 @@ public abstract class CalcActivity extends AppCompatActivity
         return watcher;
     }
 
+    private void OnCalcClick(View v)
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        ViewGroup viewGroup = findViewById(android.R.id.content);
+        View dialogView = LayoutInflater.from(v.getContext()).inflate(R.layout.result_dialog, viewGroup, false);
+        builder.setView(dialogView);
+
+        EditText resultTextBox = dialogView.findViewById(R.id.resultTextBox);
+        resultTextBox.setText(Calc());
+        resultTextBox.setKeyListener(null);
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
     private String Calc()
     {
         IMethodModel model = GetModel();
@@ -58,10 +82,10 @@ public abstract class CalcActivity extends AppCompatActivity
 
         try
         {
-            ICalcMethod polarMethod = methodFactory.GetMethod(GetMethod());
-            polarMethod.FillData(model);
+            ICalcMethod calcMethod = methodFactory.GetMethod(GetMethod());
+            calcMethod.FillData(model);
 
-            return polarMethod.Calc();
+            return calcMethod.Calc();
         }
         catch (Exception e)
         {

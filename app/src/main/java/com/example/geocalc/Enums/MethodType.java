@@ -5,6 +5,8 @@ public enum MethodType
 
     AzimuthMethod,
 
-    PolarMethod
+    PolarMethod,
+
+    RectangularOffsetsMethod
 
 }

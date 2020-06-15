@@ -243,25 +243,17 @@
             android:layout_marginTop="20dp"
             />
 
-        <TextView
-            android:layout_width="match_parent"
+        <Button
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wynik"
+            android:text="Oblicz"
             android:textAlignment="center"
             android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
             android:textSize="20dp"
             android:layout_marginTop="5dp"
-            />
-
-        <TextView
-            android:id="@+id/polarResult"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:gravity="center_horizontal"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/fill_data"
+            android:enabled="false"
+            android:id="@+id/calcButton"
             />
 
     </LinearLayout>

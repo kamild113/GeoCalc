@@ -50,15 +50,18 @@ public class AzimuthCalc extends CalcActivity
         CreateInputsListeners();
     }
 
-    private void CreateInputsListeners()
+    @Override
+    protected void CreateInputsListeners()
     {
+        super.CreateInputsListeners();
+        Button calcButton = findViewById(R.id.calcButton);
+
         _firstX = findViewById(R.id.azimuthFirstX);
         _firstY = findViewById(R.id.azimuthFirstY);
         _secondX = findViewById(R.id.azimuthSecondX);
         _secondY = findViewById(R.id.azimuthSecondY);
-        TextView resultView = findViewById(R.id.azimuthResult);
 
-        InputWatcher(resultView, _firstX, _firstY, _secondX, _secondY);
+        InputWatcher(calcButton, _firstX, _firstY, _secondX, _secondY);
     }
 
     private View.OnClickListener ButtonClickListener(final LocationCallback callback)
