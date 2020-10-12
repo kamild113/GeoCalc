@@ -91,6 +91,7 @@ public class MainMenuItem
 
         TableRow.LayoutParams params = new TableRow.LayoutParams();
         params.topMargin = 10;
+        params.width = 500;
 
         titleTextView.setLayoutParams(params);
 
@@ -105,7 +106,7 @@ public class MainMenuItem
         descriptionTextView.setTextColor(Color.parseColor("#9e9e9e"));
 
         TableRow.LayoutParams params = new TableRow.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT);
-        params.topMargin = 50;
+        params.topMargin = 40;
 
         descriptionTextView.setLayoutParams(params);
 

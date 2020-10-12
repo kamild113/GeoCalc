@@ -2,18 +2,23 @@ package com.example.geocalc.Components;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.example.geocalc.Activities.AngularIndentationCalc;
 import com.example.geocalc.Activities.AzimuthCalc;
 import com.example.geocalc.Activities.ConvertingAnglesCalc;
+import com.example.geocalc.Activities.CoordinatesDistanceCalc;
 import com.example.geocalc.Activities.MainActivity;
 import com.example.geocalc.Activities.PolarMethodCalc;
 import com.example.geocalc.Activities.RectangularOffsetsCalc;
+import com.example.geocalc.Activities.SurfaceAreaCalc;
 import com.example.geocalc.R;
 
 import java.util.ArrayList;
@@ -43,38 +48,41 @@ public class MainMenu
     private List<MainMenuItem> CreateMenuItems()
     {
         List<MainMenuItem> menuItems = new ArrayList<>();
-        menuItems.add(AzimuthCalcItem());
-        menuItems.add(PolarMethodItem());
+        menuItems.add(AzimuthCalcMethod());
+        menuItems.add(PolarMethodMethod());
         menuItems.add(RectangularOffsetsMethod());
         menuItems.add(ConvertingAnglesMethod());
+        menuItems.add(CoordinatesDistanceMethod());
+        menuItems.add(SurfaceAreaMethod());
+        menuItems.add(AngularIndentationMethod());
 
         return menuItems;
     }
 
-    private MainMenuItem AzimuthCalcItem()
+    private MainMenuItem AzimuthCalcMethod()
     {
         Drawable icon = ContextCompat.getDrawable(MainActivity.getAppContext(), R.drawable.azymut);
 
         MainMenuItem item = new MainMenuItem(
-                "Obliczanie Azymutu",
-                "Obliczanie azymutu ze współrzędnych",
+                activity.getResources().getString(R.string.azimuthCalcTitle),
+                activity.getResources().getString(R.string.azimuthCalcDesc),
                 CreateIcon(icon),
-                Color.parseColor("#0F67BE"));
+                activity.getResources().getColor(R.color.azimuthColor));
 
         item.SetOnClickListener(CreateClickListener(AzimuthCalc.class));
 
         return item;
     }
 
-    private MainMenuItem PolarMethodItem()
+    private MainMenuItem PolarMethodMethod()
     {
         Drawable icon = ContextCompat.getDrawable(MainActivity.getAppContext(), R.drawable.biegunowa);
 
         MainMenuItem item = new MainMenuItem(
-                "Metoda Biegunowa",
-                "Obliczanie współrzędnych metodą biegunową",
+                activity.getResources().getString(R.string.polarMethodTitle),
+                activity.getResources().getString(R.string.polarMethodDesc),
                 CreateIcon(icon),
-                Color.parseColor("#218024"));
+                activity.getResources().getColor(R.color.polarColor));
 
         item.SetOnClickListener(CreateClickListener(PolarMethodCalc.class));
 
@@ -86,10 +94,10 @@ public class MainMenu
         Drawable icon = ContextCompat.getDrawable(MainActivity.getAppContext(), R.drawable.domiary);
 
         MainMenuItem item = new MainMenuItem(
-                "Domiary Prostokątne",
-                "Wyznaczanie współrzędnych metodą ortogonalną (Rzędnych i Odciętych)",
+                activity.getResources().getString(R.string.rectangularOffsetsTitle),
+                activity.getResources().getString(R.string.rectangularOffsetsDesc),
                 CreateIcon(icon),
-                Color.parseColor("#F7CC65"));
+                activity.getResources().getColor(R.color.rectangularColor));
 
         item.SetOnClickListener(CreateClickListener(RectangularOffsetsCalc.class));
 
@@ -101,12 +109,63 @@ public class MainMenu
         Drawable icon = ContextCompat.getDrawable(MainActivity.getAppContext(), R.drawable.katy);
 
         MainMenuItem item = new MainMenuItem(
-                "Przeliczanie Kątów",
-                "Przeliczanie jednostek kątowych takich jak: Grady, Stopnie i Radiany",
+                activity.getResources().getString(R.string.convertingAnglesTitle),
+                activity.getResources().getString(R.string.convertingAnglesDesc),
                 CreateIcon(icon),
-                Color.parseColor("#8152A9"));
+                activity.getResources().getColor(R.color.anglesColor));
 
         item.SetOnClickListener(CreateClickListener(ConvertingAnglesCalc.class));
+
+        return item;
+    }
+
+    private MainMenuItem CoordinatesDistanceMethod()
+    {
+        Drawable icon = ContextCompat.getDrawable(MainActivity.getAppContext(), R.drawable.katy);
+        icon = icon.getConstantState().newDrawable().mutate();
+        icon.setColorFilter(activity.getResources().getColor(R.color.distanceColor), PorterDuff.Mode.SRC_IN);
+
+        MainMenuItem item = new MainMenuItem(
+                activity.getResources().getString(R.string.coordinatesDistanceTitle),
+                activity.getResources().getString(R.string.coordinatesDistanceDesc),
+                CreateIcon(icon),
+                activity.getResources().getColor(R.color.distanceColor));
+
+        item.SetOnClickListener(CreateClickListener(CoordinatesDistanceCalc.class));
+
+        return item;
+    }
+
+    private MainMenuItem SurfaceAreaMethod()
+    {
+        Drawable icon = ContextCompat.getDrawable(MainActivity.getAppContext(), R.drawable.katy);
+        icon = icon.getConstantState().newDrawable().mutate();
+        icon.setColorFilter(activity.getResources().getColor(R.color.surfaceAreaColor), PorterDuff.Mode.SRC_IN);
+
+        MainMenuItem item = new MainMenuItem(
+                activity.getResources().getString(R.string.surfaceAreaTitle),
+                activity.getResources().getString(R.string.surfaceAreaDesc),
+                CreateIcon(icon),
+                activity.getResources().getColor(R.color.surfaceAreaColor));
+
+        item.SetOnClickListener(CreateClickListener(SurfaceAreaCalc.class));
+
+        return item;
+    }
+
+    private MainMenuItem AngularIndentationMethod()
+    {
+        Drawable icon = ContextCompat.getDrawable(MainActivity.getAppContext(), R.drawable.katy);
+        icon = icon.getConstantState().newDrawable().mutate();
+        icon.setColorFilter(activity.getResources().getColor(R.color.angularIndentationColor), PorterDuff.Mode.SRC_IN);
+
+        MainMenuItem item = new MainMenuItem(
+                activity.getResources().getString(R.string.angularIndentationTitle),
+                activity.getResources().getString(R.string.angularIndentationDesc),
+                CreateIcon(icon),
+                activity.getResources().getColor(R.color.angularIndentationColor));
+
+        item.SetOnClickListener(CreateClickListener(AngularIndentationCalc.class));
 
         return item;
     }

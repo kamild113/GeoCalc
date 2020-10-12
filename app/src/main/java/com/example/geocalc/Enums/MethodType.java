@@ -7,6 +7,18 @@ public enum MethodType
 
     PolarMethod,
 
-    RectangularOffsetsMethod
+    RectangularOffsetsMethod,
+
+    CoordinatesDistanceMethod,
+
+    /**
+     * Pole powierzchni
+     */
+    SurfaceAreaMethod,
+
+    /**
+     * Wcięcie kątowe
+     */
+    AngularIndentation
 
 }

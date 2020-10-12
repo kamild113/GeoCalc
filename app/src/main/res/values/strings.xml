@@ -5,6 +5,27 @@
     <string name="fill_data">Wprowadź dane</string>
     <string name="get_coordinates">Pobieranie współrzędnych</string>
 
+    <string name="angularIndentationTitle">Wcięcie kątowe</string>
+    <string name="angularIndentationDesc">Obliczanie wcięcia kątowego</string>
+
+    <string name="surfaceAreaTitle">Pole powierzchni</string>
+    <string name="surfaceAreaDesc">Obliczanie pola powierzchni ze współrzędnych</string>
+
+    <string name="coordinatesDistanceTitle">Długość ze współrzędnych</string>
+    <string name="coordinatesDistanceDesc">Obliczanie długości ze współrzędnych</string>
+
+    <string name="convertingAnglesTitle">Przeliczanie kątów</string>
+    <string name="convertingAnglesDesc">Przeliczanie jednostek kątowych takich jak: Grady, Stopnie i Radiany</string>
+
+    <string name="rectangularOffsetsTitle">Domiary prostokątne</string>
+    <string name="rectangularOffsetsDesc">Wyznaczanie współrzędnych metodą ortogonalną (Rzędnych i Odciętych)</string>
+
+    <string name="polarMethodTitle">Metoda biegunowa</string>
+    <string name="polarMethodDesc">Obliczanie współrzędnych metodą biegunową</string>
+
+    <string name="azimuthCalcTitle">Obliczanie azymutu</string>
+    <string name="azimuthCalcDesc">Obliczanie azymutu ze współrzędnych</string>
+
     <string-array name="angles_array">
         <item>Grady</item>
         <item>Stopnie</item>

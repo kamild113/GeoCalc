@@ -17,7 +17,7 @@ public class PolarMethod implements ICalcMethod
     @Override
     public String Calc()
     {
-        return "Wynik obliczeń metody biegunowej";
+        return "Do zrobienia";
     }
 
 }

@@ -24,6 +24,9 @@
         <activity android:name=".Activities.ConvertingAnglesCalc" />
         <activity android:name=".Activities.PolarMethodCalc" />
         <activity android:name=".Activities.RectangularOffsetsCalc" />
+        <activity android:name=".Activities.CoordinatesDistanceCalc" />
+        <activity android:name=".Activities.SurfaceAreaCalc" />
+        <activity android:name=".Activities.AngularIndentationCalc" />
     </application>
 
 </manifest>

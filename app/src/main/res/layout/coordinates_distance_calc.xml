@@ -6,9 +6,10 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="415dp"
         android:layout_height="56dp"
-        android:background="@color/rectangularColor"
+        android:background="@color/distanceColor"
         android:gravity="bottom|left"
         android:paddingLeft="25dp"
         android:paddingBottom="5dp"
@@ -18,13 +19,12 @@
         android:shadowRadius="1"
         android:singleLine="false"
         android:soundEffectsEnabled="false"
-        android:text="Domiary prostokątne"
+        android:text="Obliczanie długości ze współrzędnych"
         android:textColor="#FFFFFF"
         android:textSize="18dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-2dp"
         tools:layout_editor_absoluteY="-1dp" />
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,7 +46,7 @@
                 />
 
             <Button
-                android:id="@+id/rectFirstCoordinateButton"
+                android:id="@+id/coordinatesFirstCoordinateButton"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@android:drawable/ic_menu_mylocation"
@@ -59,7 +59,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/rectangularColor"
+            android:background="@color/distanceColor"
             android:layout_marginHorizontal="20dp"
             />
 
@@ -75,17 +75,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="X:"
-                android:labelFor="@+id/rectFirstX"
+                android:labelFor="@+id/coordinatesFirstX"
                 android:layout_marginTop="10dp"/>
 
             <EditText
-                android:id="@+id/rectFirstX"
+                android:id="@+id/coordinatesFirstX"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
-                android:backgroundTint="@color/rectangularColor"
+                android:backgroundTint="@color/distanceColor"
                 android:textCursorDrawable="@null"
-                android:textColor="@color/rectangularColor"
+                android:textColor="@color/distanceColor"
                 android:inputType="numberDecimal"
                 />
 
@@ -93,17 +93,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Y:"
-                android:labelFor="@+id/rectFirstY"
+                android:labelFor="@+id/coordinatesFirstY"
                 android:layout_marginTop="10dp"/>
 
             <EditText
-                android:id="@+id/rectFirstY"
+                android:id="@+id/coordinatesFirstY"
                 android:layout_width="130dp"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
-                android:backgroundTint="@color/rectangularColor"
+                android:backgroundTint="@color/distanceColor"
                 android:textCursorDrawable="@null"
-                android:textColor="@color/rectangularColor"
+                android:textColor="@color/distanceColor"
                 android:inputType="numberDecimal"
                 />
 
@@ -121,7 +121,7 @@
                 />
 
             <Button
-                android:id="@+id/rectSecondCoordinateButton"
+                android:id="@+id/coordinatesSecondCoordinateButton"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@android:drawable/ic_menu_mylocation"
@@ -133,7 +133,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/rectangularColor"
+            android:background="@color/distanceColor"
             android:layout_marginHorizontal="20dp"
             />
 
@@ -149,17 +149,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="X:"
-                android:labelFor="@+id/rectSecondX"
+                android:labelFor="@+id/coordinatesSecondX"
                 android:layout_marginTop="10dp"/>
 
             <EditText
-                android:id="@+id/rectSecondX"
+                android:id="@+id/coordinatesSecondX"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
-                android:backgroundTint="@color/rectangularColor"
+                android:backgroundTint="@color/distanceColor"
                 android:textCursorDrawable="@null"
-                android:textColor="@color/rectangularColor"
+                android:textColor="@color/distanceColor"
                 android:inputType="numberDecimal"
                 />
 
@@ -167,91 +167,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Y:"
-                android:labelFor="@+id/rectSecondY"
+                android:labelFor="@+id/coordinatesSecondY"
                 android:layout_marginTop="10dp"/>
 
             <EditText
-                android:id="@+id/rectSecondY"
+                android:id="@+id/coordinatesSecondY"
                 android:layout_width="130dp"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
-                android:backgroundTint="@color/rectangularColor"
+                android:backgroundTint="@color/distanceColor"
                 android:textCursorDrawable="@null"
-                android:textColor="@color/rectangularColor"
-                android:inputType="numberDecimal"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="#3 Współrzędna"
-                android:layout_margin="20dp"
-                />
-
-            <Button
-                android:id="@+id/rectThirdCoordinateButton"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@android:drawable/ic_menu_mylocation"
-                android:backgroundTint="@android:color/holo_red_dark"
-                android:layout_marginLeft="-50dp"
-                android:layout_marginTop="20dp"/>
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/rectangularColor"
-            android:layout_marginHorizontal="20dp"
-            />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            android:layout_marginLeft="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="X:"
-                android:labelFor="@+id/rectThirdX"
-                android:layout_marginTop="10dp"/>
-
-            <EditText
-                android:id="@+id/rectThirdX"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_margin="10dp"
-                android:backgroundTint="@color/rectangularColor"
-                android:textCursorDrawable="@null"
-                android:textColor="@color/rectangularColor"
-                android:inputType="numberDecimal"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Y:"
-                android:labelFor="@+id/rectThirdY"
-                android:layout_marginTop="10dp"/>
-
-            <EditText
-                android:id="@+id/rectThirdY"
-                android:layout_width="130dp"
-                android:layout_height="50dp"
-                android:layout_margin="10dp"
-                android:backgroundTint="@color/rectangularColor"
-                android:textCursorDrawable="@null"
-                android:textColor="@color/rectangularColor"
+                android:textColor="@color/distanceColor"
                 android:inputType="numberDecimal"
                 />
 
@@ -260,7 +186,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/rectangularColor"
+            android:background="@color/distanceColor"
             android:layout_marginHorizontal="50dp"
             android:layout_marginTop="20dp"
             />

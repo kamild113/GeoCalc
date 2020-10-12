@@ -30,8 +30,17 @@
             android:gravity="center"
             android:id="@+id/resultTextBox"
             android:background="#AAAA"
-            android:layout_marginBottom="100dp"
             android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/copyButton"
+            android:text="Kopiuj"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="50dp"
             />
 
     </LinearLayout>

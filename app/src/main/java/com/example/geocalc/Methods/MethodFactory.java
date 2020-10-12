@@ -15,6 +15,18 @@ public class MethodFactory
             case PolarMethod:
                 return new PolarMethod();
 
+            case RectangularOffsetsMethod:
+                return new RectangularOffsetsMethod();
+
+            case CoordinatesDistanceMethod:
+                return new CoordinatesDistanceMethod();
+
+            case SurfaceAreaMethod:
+                return new SurfaceAreaMethod();
+
+            case AngularIndentation:
+                return new AngularIndentationMethod();
+
             default:
                 throw new Exception("Not implemented method.");
         }
