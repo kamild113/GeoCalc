@@ -19,6 +19,11 @@ public enum MethodType
     /**
      * Wcięcie kątowe
      */
-    AngularIndentation
+    AngularIndentation,
+
+    /**
+     * Wcięcie liniowe
+     */
+    LinearIndentation
 
 }

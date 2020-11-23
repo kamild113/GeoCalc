@@ -27,6 +27,9 @@ public class MethodFactory
             case AngularIndentation:
                 return new AngularIndentationMethod();
 
+            case LinearIndentation:
+                return new LinearIndentationMethod();
+
             default:
                 throw new Exception("Not implemented method.");
         }

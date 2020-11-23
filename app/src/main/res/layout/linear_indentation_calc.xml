@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/linearIndentationColor"
+        android:gravity="bottom|left"
+        android:paddingLeft="25dp"
+        android:paddingBottom="5dp"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:singleLine="false"
+        android:soundEffectsEnabled="false"
+        android:text="@string/linearIndentationTitle"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="#1 Współrzędna"
+                android:layout_margin="20dp"
+                />
+
+            <Button
+                android:id="@+id/firstCoordinateButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@android:drawable/ic_menu_mylocation"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/linearIndentationColor"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X:"
+                android:labelFor="@+id/firstX"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/firstX"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/linearIndentationColor"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/linearIndentationColor"
+                android:inputType="numberDecimal"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Y:"
+                android:labelFor="@+id/firstY"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/firstY"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/linearIndentationColor"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/linearIndentationColor"
+                android:inputType="numberDecimal"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="#2 Współrzędna"
+                android:layout_margin="20dp"
+                />
+
+            <Button
+                android:id="@+id/secondCoordinateButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@android:drawable/ic_menu_mylocation"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/linearIndentationColor"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X:"
+                android:labelFor="@+id/secondX"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/secondX"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/linearIndentationColor"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/linearIndentationColor"
+                android:inputType="numberDecimal"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Y:"
+                android:labelFor="@+id/secondY"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/secondY"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/linearIndentationColor"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/linearIndentationColor"
+                android:inputType="numberDecimal"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/linearIndentationColor"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AP:"
+                android:labelFor="@+id/ap"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/ap"
+                android:layout_width="95dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/linearIndentationColor"
+                android:inputType="numberDecimal"
+                android:textColor="@color/linearIndentationColor"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BP:"
+                android:labelFor="@+id/bp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/bp"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/linearIndentationColor"
+                android:inputType="numberDecimal"
+                android:textColor="@color/linearIndentationColor"
+                android:textCursorDrawable="@null" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/linearIndentationColor"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oblicz"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            android:enabled="false"
+            android:id="@+id/calcButton"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

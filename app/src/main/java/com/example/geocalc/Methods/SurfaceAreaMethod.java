@@ -21,6 +21,8 @@ public class SurfaceAreaMethod implements ICalcMethod {
                 (_model.XC + _model.XD) * (_model.YC - _model.YD) -
                 (_model.XD + _model.XA) * (_model.YD - _model.YA);
 
+        area = Math.abs(area);
+
         return String.format("%." + _resultPrecision + "f", area);
     }
 }

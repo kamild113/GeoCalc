@@ -11,5 +11,6 @@
     <color name="distanceColor">#AA5939</color>
     <color name="surfaceAreaColor">#800300</color>
     <color name="angularIndentationColor">#FF6C00</color>
+    <color name="linearIndentationColor">#555555</color>
 
 </resources>

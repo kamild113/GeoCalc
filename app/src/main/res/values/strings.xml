@@ -26,6 +26,9 @@
     <string name="azimuthCalcTitle">Obliczanie azymutu</string>
     <string name="azimuthCalcDesc">Obliczanie azymutu ze współrzędnych</string>
 
+    <string name="linearIndentationTitle">Wcięcie liniowe</string>
+    <string name="linearIndentationDesc">Obliczanie wcięcia liniowego</string>
+
     <string-array name="angles_array">
         <item>Grady</item>
         <item>Stopnie</item>

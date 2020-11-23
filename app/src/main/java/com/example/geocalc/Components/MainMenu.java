@@ -15,6 +15,7 @@ import com.example.geocalc.Activities.AngularIndentationCalc;
 import com.example.geocalc.Activities.AzimuthCalc;
 import com.example.geocalc.Activities.ConvertingAnglesCalc;
 import com.example.geocalc.Activities.CoordinatesDistanceCalc;
+import com.example.geocalc.Activities.LinearIndentationCalc;
 import com.example.geocalc.Activities.MainActivity;
 import com.example.geocalc.Activities.PolarMethodCalc;
 import com.example.geocalc.Activities.RectangularOffsetsCalc;
@@ -55,6 +56,7 @@ public class MainMenu
         menuItems.add(CoordinatesDistanceMethod());
         menuItems.add(SurfaceAreaMethod());
         menuItems.add(AngularIndentationMethod());
+        menuItems.add(LinearIndentationMethod());
 
         return menuItems;
     }
@@ -166,6 +168,23 @@ public class MainMenu
                 activity.getResources().getColor(R.color.angularIndentationColor));
 
         item.SetOnClickListener(CreateClickListener(AngularIndentationCalc.class));
+
+        return item;
+    }
+
+    private MainMenuItem LinearIndentationMethod()
+    {
+        Drawable icon = ContextCompat.getDrawable(MainActivity.getAppContext(), R.drawable.katy);
+        icon = icon.getConstantState().newDrawable().mutate();
+        icon.setColorFilter(activity.getResources().getColor(R.color.linearIndentationColor), PorterDuff.Mode.SRC_IN);
+
+        MainMenuItem item = new MainMenuItem(
+                activity.getResources().getString(R.string.linearIndentationTitle),
+                activity.getResources().getString(R.string.linearIndentationDesc),
+                CreateIcon(icon),
+                activity.getResources().getColor(R.color.linearIndentationColor));
+
+        item.SetOnClickListener(CreateClickListener(LinearIndentationCalc.class));
 
         return item;
     }
