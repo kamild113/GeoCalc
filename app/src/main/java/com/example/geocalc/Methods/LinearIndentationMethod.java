@@ -26,7 +26,7 @@ public class LinearIndentationMethod implements ICalcMethod {
             double Cb = Math.pow(_model.BP, 2) + (-1) * Math.pow(_model.AP, 2) + Math.pow(AB, 2);
             double Cc = Math.pow(_model.BP, 2) + Math.pow(_model.AP, 2) + (-1) * Math.pow(AB, 2);
 
-            double P4 = Math.sqrt(Math.abs(Ca * Cb + Ca * Cc + Cb * Cc));
+            double P4 = Math.sqrt(Ca * Cb + Ca * Cc + Cb * Cc);
 
             double A = _model.XA * Cb + (-1) * P4 * _model.YA + _model.XB * Ca + P4 * _model.YB;
             double B = _model.XA * (-1) * P4 + _model.YA * Cb + _model.XB * P4 + _model.YB * Ca;
