@@ -8,7 +8,7 @@ public class RectangularOffsetsMethod implements ICalcMethod {
 
     RectangularOffsetsMethodModel _model;
 
-    final int _resultPrecision = 8;
+    final int _resultPrecision = 4;
 
     @Override
     public void FillData(IMethodModel model)

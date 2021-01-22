@@ -4,13 +4,13 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
 
-    <color name="azimuthColor">#0F67BE</color>
+    <color name="azimuthColor">#D80073</color>
     <color name="polarColor">#218024</color>
-    <color name="rectangularColor">#F7CC65</color>
+    <color name="rectangularColor">#8152A9</color>
     <color name="anglesColor">#8152A9</color>
-    <color name="distanceColor">#AA5939</color>
+    <color name="distanceColor">#F7CC65</color>
     <color name="surfaceAreaColor">#800300</color>
-    <color name="angularIndentationColor">#FF6C00</color>
-    <color name="linearIndentationColor">#555555</color>
+    <color name="angularIndentationColor">#800300</color>
+    <color name="linearIndentationColor">#218024</color>
 
 </resources>

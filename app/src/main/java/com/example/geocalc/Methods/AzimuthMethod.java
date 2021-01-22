@@ -7,6 +7,7 @@ public class AzimuthMethod implements ICalcMethod
 {
 
     AzimuthMethodModel _model;
+    int _resultPrecision = 4;
 
     @Override
     public void FillData(IMethodModel model)
@@ -21,8 +22,7 @@ public class AzimuthMethod implements ICalcMethod
         double dyab = _model.SecondY - _model.FirstY;
 
         double result = Math.abs(dyab/dxab);
-
-        return Double.isNaN(result) ? "Błędne dane" : Double.toString(result);
+        return Double.isNaN(result) ? "Błędne dane" : String.format("%." + _resultPrecision + "f", result);
     }
 
 }

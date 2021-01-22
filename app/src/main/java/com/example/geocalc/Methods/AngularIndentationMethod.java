@@ -6,7 +6,7 @@ import com.example.geocalc.Methods.Models.IMethodModel;
 public class AngularIndentationMethod implements ICalcMethod {
 
     AngularIndentationModel _model;
-    final int _resultPrecision = 8;
+    final int _resultPrecision = 4;
 
     @Override
     public void FillData(IMethodModel model) {

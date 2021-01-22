@@ -6,8 +6,7 @@ import com.example.geocalc.Methods.Models.SurfaceAreaModel;
 public class SurfaceAreaMethod implements ICalcMethod {
 
     SurfaceAreaModel _model;
-
-    final int _resultPrecision = 8;
+    int _resultPrecision = 4;
 
     @Override
     public void FillData(IMethodModel model) {

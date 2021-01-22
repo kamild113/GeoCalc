@@ -6,7 +6,7 @@ import com.example.geocalc.Methods.Models.LinearIndentationModel;
 public class LinearIndentationMethod implements ICalcMethod {
 
     LinearIndentationModel _model;
-    final int _resultPrecision = 8;
+    final int _resultPrecision = 4;
 
     @Override
     public void FillData(IMethodModel model)

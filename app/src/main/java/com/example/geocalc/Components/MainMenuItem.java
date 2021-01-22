@@ -2,6 +2,7 @@ package com.example.geocalc.Components;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -40,15 +41,17 @@ public class MainMenuItem
     {
         TableLayout item = new TableLayout(this.context);
         TableLayout.LayoutParams tableParams = new TableLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        tableParams.bottomMargin = 40;
-        tableParams.height = 350;
+        tableParams.bottomMargin = 80;
 
         item.setLayoutParams(tableParams);
         item.setStretchAllColumns(true);
         item.setShrinkAllColumns(true);
 
         TableRow row = new TableRow(this.context);
-        row.setLayoutParams(new TableLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        row.setGravity(Gravity.CENTER_VERTICAL);
+        TableRow.LayoutParams rowParams = new TableRow.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        rowParams.gravity = Gravity.CENTER_VERTICAL;
+        row.setLayoutParams(rowParams);
 
         ImageView itemIcon = CreateIcon();
         TextView title = CreateTitle();
@@ -75,6 +78,7 @@ public class MainMenuItem
         TableRow.LayoutParams params = new TableRow.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT);
         params.weight = 1;
         params.width = 150;
+        params.gravity = Gravity.CENTER_VERTICAL;
         params.setMargins(30, 0, 30, 0);
 
         result.setLayoutParams(params);

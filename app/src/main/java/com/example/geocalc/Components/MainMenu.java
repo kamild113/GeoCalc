@@ -50,11 +50,11 @@ public class MainMenu
     {
         List<MainMenuItem> menuItems = new ArrayList<>();
         menuItems.add(AzimuthCalcMethod());
-        menuItems.add(PolarMethodMethod());
+        //menuItems.add(PolarMethodMethod());
         menuItems.add(RectangularOffsetsMethod());
-        menuItems.add(ConvertingAnglesMethod());
+        //menuItems.add(ConvertingAnglesMethod());
         menuItems.add(CoordinatesDistanceMethod());
-        menuItems.add(SurfaceAreaMethod());
+        //menuItems.add(SurfaceAreaMethod());
         menuItems.add(AngularIndentationMethod());
         menuItems.add(LinearIndentationMethod());
 
@@ -123,9 +123,7 @@ public class MainMenu
 
     private MainMenuItem CoordinatesDistanceMethod()
     {
-        Drawable icon = ContextCompat.getDrawable(MainActivity.getAppContext(), R.drawable.katy);
-        icon = icon.getConstantState().newDrawable().mutate();
-        icon.setColorFilter(activity.getResources().getColor(R.color.distanceColor), PorterDuff.Mode.SRC_IN);
+        Drawable icon = ContextCompat.getDrawable(MainActivity.getAppContext(), R.drawable.domiar);
 
         MainMenuItem item = new MainMenuItem(
                 activity.getResources().getString(R.string.coordinatesDistanceTitle),
@@ -157,9 +155,7 @@ public class MainMenu
 
     private MainMenuItem AngularIndentationMethod()
     {
-        Drawable icon = ContextCompat.getDrawable(MainActivity.getAppContext(), R.drawable.katy);
-        icon = icon.getConstantState().newDrawable().mutate();
-        icon.setColorFilter(activity.getResources().getColor(R.color.angularIndentationColor), PorterDuff.Mode.SRC_IN);
+        Drawable icon = ContextCompat.getDrawable(MainActivity.getAppContext(), R.drawable.katowe);
 
         MainMenuItem item = new MainMenuItem(
                 activity.getResources().getString(R.string.angularIndentationTitle),
@@ -174,9 +170,7 @@ public class MainMenu
 
     private MainMenuItem LinearIndentationMethod()
     {
-        Drawable icon = ContextCompat.getDrawable(MainActivity.getAppContext(), R.drawable.katy);
-        icon = icon.getConstantState().newDrawable().mutate();
-        icon.setColorFilter(activity.getResources().getColor(R.color.linearIndentationColor), PorterDuff.Mode.SRC_IN);
+        Drawable icon = ContextCompat.getDrawable(MainActivity.getAppContext(), R.drawable.liniowe);
 
         MainMenuItem item = new MainMenuItem(
                 activity.getResources().getString(R.string.linearIndentationTitle),
